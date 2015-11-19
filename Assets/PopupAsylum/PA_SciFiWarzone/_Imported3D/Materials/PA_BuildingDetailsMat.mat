@@ -20,7 +20,7 @@ Material:
           name: _MainTex
         second:
           m_Texture: {fileID: 2800000, guid: 2f047d77eede82249aee6842d05c8553, type: 3}
-          m_Scale: {x: 1, y: 1}
+          m_Scale: {x: 10, y: 10}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -33,7 +33,7 @@ Material:
         first:
           name: _Cube
         second:
-          m_Texture: {fileID: 8900000, guid: 4cd27f1305dd62646b2684ddac0f03aa, type: 2}
+          m_Texture: {fileID: 8900000, guid: 08ace8642380dd0489507f969b3d9dd5, type: 2}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats: {}

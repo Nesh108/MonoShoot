@@ -28,7 +28,7 @@ public class PlayerAttack : MonoBehaviour {
 		}
 	}
 
-	private void MeeleAttack() {
+	void MeeleAttack() {
 
 		// Current distance from the target
 		float distance = Vector3.Distance (target.transform.position, transform.position);

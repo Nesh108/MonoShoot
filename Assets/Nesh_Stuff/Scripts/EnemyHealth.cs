@@ -32,7 +32,6 @@ public class EnemyHealth : MonoBehaviour {
 		// Avoid division by 0
 		maxHealth = Mathf.Max (0, maxHealth);
 
-
 		healthBarLength = (Screen.width / 2) * (curHealth / (float)maxHealth);
 	}
 }
