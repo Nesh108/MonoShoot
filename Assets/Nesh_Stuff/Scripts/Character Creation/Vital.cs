@@ -1,9 +1,11 @@
 ﻿
-public class Vital : ModifiedStat {
+public class Vital : ModifiedStat
+{
 
 	private int _curValue;
 
-	public Vital() {
+	public Vital ()
+	{
 		_curValue = 0;
 		ExpToLevel = 50;
 		LevelModifier = 1.1f;
@@ -12,7 +14,7 @@ public class Vital : ModifiedStat {
 	public int CurValue {
 		get { 
 			// To make sure that the value is not higher than the max
-			if(_curValue > AdjustedBaseValue)
+			if (_curValue > AdjustedBaseValue)
 				_curValue = AdjustedBaseValue;
 
 			return _curValue; 
@@ -21,7 +23,8 @@ public class Vital : ModifiedStat {
 	}
 }
 
-public enum VitalName {
+public enum VitalName
+{
 	Health,
 	Energy,
 	Mana

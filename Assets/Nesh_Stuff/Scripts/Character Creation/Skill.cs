@@ -1,9 +1,11 @@
 ﻿
-public class Skill : ModifiedStat {
+public class Skill : ModifiedStat
+{
 	
 	private bool _known;
 
-	public Skill() {
+	public Skill ()
+	{
 		_known = false;
 		ExpToLevel = 25;
 		LevelModifier = 1.1f;
@@ -15,7 +17,8 @@ public class Skill : ModifiedStat {
 	}
 }
 
-public enum SkillName {
+public enum SkillName
+{
 	Melee_Offense,
 	Melee_Defense,
 	Ranged_Offense,
