@@ -10,4 +10,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nesh_Stuff/Scenes/CharacterGenerator.unity
   - enabled: 1
+    path: Assets/Nesh_Stuff/Scenes/Level1.unity
+  - enabled: 1
     path: Assets/Nesh_Stuff/Scenes/Game.unity

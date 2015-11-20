@@ -105,16 +105,33 @@ public class CharacterGenerator : MonoBehaviour
 	{
 		GUI.Label (new Rect (250, 10, STAT_LABEL_WIDTH, LINE_HEIGHT), "Points Left: " + pointsLeft);
 	}
+	
+	private void DisplayCreateLabel ()
+	{
+		GUI.Label (new Rect (Screen.width / 2 - 50, STARTING_ATTR_POS + ((Enum.GetValues (typeof(AttributeName)).Length + Enum.GetValues (typeof(VitalName)).Length) * BASEVALUE_LABEL_WIDTH), STAT_LABEL_WIDTH, LINE_HEIGHT), "Create", "Button");
+	}
 
 	private void DisplayCreateButton ()
 	{
-		if(GUI.Button (new Rect (Screen.width / 2 - 50, STARTING_ATTR_POS + ((Enum.GetValues (typeof(AttributeName)).Length + Enum.GetValues (typeof(VitalName)).Length) * BASEVALUE_LABEL_WIDTH), STAT_LABEL_WIDTH, LINE_HEIGHT), "Create")){
+
+		if(_char.Name == "" || pointsLeft > 0)
+			GUI.enabled = false;
+
+		if (GUI.Button (new Rect (Screen.width / 2 - 50, STARTING_ATTR_POS + ((Enum.GetValues (typeof(AttributeName)).Length + Enum.GetValues (typeof(VitalName)).Length) * BASEVALUE_LABEL_WIDTH), STAT_LABEL_WIDTH, LINE_HEIGHT), "Create")) {
 
 			// Change cur value of vital to max modified value of that vital
+			UpdateCurVitalValues();
 
-			GameObject.Find("GameSettings").GetComponent<GameSettings>().SaveCharacterData();
+			GameObject.Find ("GameSettings").GetComponent<GameSettings> ().SaveCharacterData ();
 
 			Application.LoadLevel (1);
 		}
+
+		GUI.enabled = true;
+	}
+
+	private void UpdateCurVitalValues(){
+		for(int i = 0; i < Enum.GetValues(typeof(VitalName)).Length; i++)
+			_char.GetVital(i).CurValue = _char.GetVital(i).AdjustedBaseValue;
 	}
 }

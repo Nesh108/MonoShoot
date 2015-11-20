@@ -34,14 +34,20 @@ public class ModifiedStat : BaseStat
 		CalculateModValue ();
 	}
 
+	override
 	public string ToString ()
 	{
 
-		string temp;
+		string temp = "";
 
-		for (int i = 0; i < _mods.Count; i++)
+		for (int i = 0; i < _mods.Count; i++){
 			temp += _mods [i].attribute.Name + "_" + _mods [i].ratio;
-	
+
+			if(i < _mods.Count -1)
+			{
+				temp += "|";
+			}
+		}
 
 		return temp;
 	}
