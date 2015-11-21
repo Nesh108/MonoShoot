@@ -1,6 +1,11 @@
-﻿
+﻿/// <summary>
+/// Base stat.
+/// 
+/// This is the base class for a stat in game
+/// </summary>
 public class BaseStat
 {
+	public const int STARTING_EXP_COST = 100;
 	private int _baseValue;			// base value of the stat
 	private int _buffValue;			// amount of the buff of the stat
 	private int _expToLevel;		// exp required to next level
@@ -11,7 +16,7 @@ public class BaseStat
 		_baseValue = 0;
 		_buffValue = 0;
 		_levelModifier = 1.1f;	// 10% more per level
-		_expToLevel = 100;
+		_expToLevel = STARTING_EXP_COST;
 	}
 
 #region Setters and Getters
