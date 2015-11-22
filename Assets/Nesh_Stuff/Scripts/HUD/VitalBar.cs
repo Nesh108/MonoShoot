@@ -18,7 +18,6 @@ public class VitalBar : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-	
 		_display = healthBar.GetComponent<RectTransform> ();
 		_maxBarLength = (int)_display.rect.width;
 
