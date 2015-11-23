@@ -14,6 +14,7 @@ public class VitalBar : MonoBehaviour
 	private int _curBarLength;
 	private RectTransform _display;
 	public GameObject healthBar;
+	private string name;
 
 	// Use this for initialization
 	void Start ()
@@ -67,6 +68,5 @@ public class VitalBar : MonoBehaviour
 	{
 		healthBar.SetActive (show);
 	}
-
 
 }
