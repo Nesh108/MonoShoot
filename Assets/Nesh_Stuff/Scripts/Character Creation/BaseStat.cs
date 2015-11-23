@@ -11,8 +11,11 @@ public class BaseStat
 	private int _expToLevel;		// exp required to next level
 	private float _levelModifier;	// modifier applied to the skill
 
+	private string _name;
+
 	public BaseStat ()
-	{
+	{		
+		_name = string.Empty;
 		_baseValue = 0;
 		_buffValue = 0;
 		_levelModifier = 1.1f;	// 10% more per level
@@ -38,6 +41,11 @@ public class BaseStat
 	public float LevelModifier {
 		get{ return _levelModifier; }
 		set{ _levelModifier = value; }
+	}
+	
+	public string Name {
+		get { return _name; }
+		set { _name = value; }
 	}
 #endregion
 
