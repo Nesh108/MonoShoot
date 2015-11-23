@@ -41,6 +41,7 @@ public class PlayerAttack : MonoBehaviour {
 			eh.AdjustCurrentHealth (-weaponDamage);
 
 			Debug.Log("Meele Attack! Enemy HP: " + eh.curHealth);
+			Messenger<int, int>.Broadcast("enemy health update", eh.curHealth, eh.maxHealth);
 		}
 	}
 }

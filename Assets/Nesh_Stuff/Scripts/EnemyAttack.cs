@@ -39,6 +39,12 @@ public class EnemyAttack : MonoBehaviour {
 		if (distance < attackDistance && direction > 0) {
 			PlayerHealth eh = (PlayerHealth)target.GetComponent ("PlayerHealth");
 			eh.AdjustCurrentHealth (-weaponDamage);
+
+			Messenger<int, int>.Broadcast("player health update", eh.curHealth, eh.maxHealth);
+			Debug.Log ("GOT ATTACKED: " + eh.curHealth + "hp");
 		}
+		else
+			Debug.Log ("missed! dist:" + distance + " dir: " + direction);
+
 	}
 }

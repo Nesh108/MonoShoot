@@ -8,6 +8,6 @@ public class PlayerCharacter : BaseCharacter
 	}
 
 	void Update(){
-		Messenger<int, int>.Broadcast("player health update", 20, 100);
+		//Messenger<int, int>.Broadcast("player health update", 20, 100);
 	}
 }

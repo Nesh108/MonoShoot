@@ -41,27 +41,30 @@ public class Targetting : MonoBehaviour
 
 	private void TargetEnemy ()
 	{
+		if (targets.Count == 0)
+			AddAllEnemies ();
+		else {
 
-
-		if (selectedTarget == null) {
+			if (selectedTarget == null) {
 			
-			SortTargetsByDistance ();
-			selectedTarget = targets [0];
-		} else {
+				SortTargetsByDistance ();
+				selectedTarget = targets [0];
+			} else {
 		
-			int index = targets.IndexOf (selectedTarget);
+				int index = targets.IndexOf (selectedTarget);
 
-			if (index < targets.Count - 1)
-				index++;
-			else
-				index = 0;
+				if (index < targets.Count - 1)
+					index++;
+				else
+					index = 0;
 
-			DeselectTarget ();
-			selectedTarget = targets [index];
+				DeselectTarget ();
+				selectedTarget = targets [index];
 
+			}
+
+			SelectTarget ();
 		}
-
-		SelectTarget ();
 	}
 
 	private void SelectTarget ()

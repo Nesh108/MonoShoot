@@ -6,7 +6,7 @@ public class GameMaster : MonoBehaviour
 
 	public GameObject playerCharacter;
 	public GameObject gameSettings;
-	public Camera mainCamera;
+	//public Camera mainCamera;
 	private const float zOffset = -2.5f;
 	private const float yOffset = 2.5f;
 	private const float xRotOffset = 22.5f;
@@ -34,8 +34,8 @@ public class GameMaster : MonoBehaviour
 
 		_playerScript = _player.GetComponent<PlayerCharacter> ();
 
-		mainCamera.transform.position = new Vector3 (_player.transform.position.x, _player.transform.position.y + yOffset, _player.transform.position.z + zOffset);
-		mainCamera.transform.Rotate (xRotOffset, 0, 0);
+//		mainCamera.transform.position = new Vector3 (_player.transform.position.x, _player.transform.position.y + yOffset, _player.transform.position.z + zOffset);
+//		mainCamera.transform.Rotate (xRotOffset, 0, 0);
 
 		LoadCharacter ();
 	}
