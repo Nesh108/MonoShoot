@@ -41,10 +41,8 @@ public class EnemyAttack : MonoBehaviour {
 			eh.AdjustCurrentHealth (-weaponDamage);
 
 			Messenger<int, int>.Broadcast("player health update", eh.curHealth, eh.maxHealth);
-			Debug.Log ("GOT ATTACKED: " + eh.curHealth + "hp");
+			Debug.Log ("Enemy ATTACKED: " + eh.curHealth + "hp");
 		}
-		else
-			Debug.Log ("missed! dist:" + distance + " dir: " + direction);
 
 	}
 }
