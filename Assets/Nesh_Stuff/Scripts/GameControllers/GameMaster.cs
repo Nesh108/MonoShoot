@@ -6,10 +6,10 @@ public class GameMaster : MonoBehaviour
 
 	public GameObject playerCharacter;
 	public GameObject gameSettings;
-	//public Camera mainCamera;
-	private const float zOffset = -2.5f;
-	private const float yOffset = 2.5f;
-	private const float xRotOffset = 22.5f;
+//	public Camera mainCamera;
+//	private const float zOffset = -2.5f;
+//	private const float yOffset = 2.5f;
+//	private const float xRotOffset = 22.5f;
 	private GameObject _player;
 	private PlayerCharacter _playerScript;
 	private Vector3 _playerSpawnPointPos;		// Spawn point in 3D space for player
