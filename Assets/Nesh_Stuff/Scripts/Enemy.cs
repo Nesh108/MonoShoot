@@ -5,9 +5,7 @@ public class Enemy : BaseCharacter {
 
 	public int curHealth;
 	public int maxHealth;
-
-	public string name;
-
+    
 	// Use this for initialization
 	void Start () {
 		GetPrimaryAttribute((int)AttributeName.Constitution).BaseValue = 100;

@@ -51,10 +51,6 @@ public class HackAndSlashCamera : MonoBehaviour
 
     void Start()
     {
-
-        if (GameObject.Find("Game Master").GetComponent<GameMaster>().isLoadComplete() || target != null)
-            InitialSetUp();
-
     }
 
     void Update()
