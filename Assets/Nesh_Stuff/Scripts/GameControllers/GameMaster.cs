@@ -14,6 +14,8 @@ public class GameMaster : MonoBehaviour
 	private PlayerCharacter _playerScript;
 	private Vector3 _playerSpawnPointPos;		// Spawn point in 3D space for player
 
+    private bool _isLoadComplete = false;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -38,7 +40,8 @@ public class GameMaster : MonoBehaviour
 //		mainCamera.transform.Rotate (xRotOffset, 0, 0);
 
 		LoadCharacter ();
-	}
+        _isLoadComplete = true;
+    }
 	
 	public void LoadCharacter ()
 	{
@@ -51,4 +54,9 @@ public class GameMaster : MonoBehaviour
 		GameObject.Find ("Game Settings").GetComponent<GameSettings> ().LoadCharacterData ();
 
 	}
+
+    public bool isLoadComplete()
+    {
+        return _isLoadComplete;
+    }
 }
